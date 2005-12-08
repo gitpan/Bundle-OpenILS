@@ -1,0 +1,6 @@
+Makefile.PL
+MANIFEST
+README
+t/Bundle-OpenILS.t
+lib/Bundle/OpenILS.pm
+META.yml                                 Module meta-data (added by MakeMaker)
