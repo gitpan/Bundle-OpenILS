@@ -1,34 +1,37 @@
 package Bundle::OpenILS;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 1;
 __END__
 
 =head1 NAME
 
-Bundle::OpenILS - install all OpenILS related modules
+Bundle::OpenILS - install all OpenILS prereq modules
 
 =head1 SYNOPSIS
 
   perl -MCPAN -e 'install Bundle::OpenILS'
 
 =head1 CONTENTS
-Apache2
-Apache::Log
-Apache::Const
+
 APR::Const
 Class::DBI
 CGI
 DateTime
 DateTime::Format::ISO8601
 Digest::MD5
+DBD
+DBD::Pg
+GD
 GD::Graph - ( ::pie, :bars3d, ::lines3d)?
+LWP
 LWP::UserAgent
 MARC::Charset
 MARC::Field
 MARC::File::XML
 MARC::Record
+Event
 Net::Z3950  - requires yaz and Event.pm
 Spreadsheet::WriteExcel
 Template
@@ -49,7 +52,7 @@ on CPAN) but eventually, it will include all the perl for that
 project. Note that you must install the Bundle::OpenSRF separately.
 
 Bundles have special meaning for the CPAN module. When you install the 
-bundle module all modules mentioned in "CONTENTS" will be installed 
+bundle module all modules mentioned in CONTENTS will be installed 
 instead.
 
 =head1 AUTHOR
