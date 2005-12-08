@@ -1,6 +1,6 @@
 package Bundle::OpenILS;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 1;
 __END__
@@ -29,7 +29,6 @@ LWP
 LWP::UserAgent
 MARC::Charset
 MARC::Field
-MARC::File::XML
 MARC::Record
 Event
 Net::Z3950  - requires yaz and Event.pm
