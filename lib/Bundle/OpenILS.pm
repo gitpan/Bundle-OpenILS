@@ -1,6 +1,6 @@
 package Bundle::OpenILS;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 1;
 __END__
@@ -17,13 +17,14 @@ Bundle::OpenILS - install all OpenILS prereq modules
 
 APR::Const
 Class::DBI
+Class::DBI::AbstractSearch
 CGI
 DateTime
 DateTime::Format::ISO8601
 Digest::MD5
 DBD
 DBD::Pg
-GD
+GD - Requires GD Graphics Library
 GD::Graph - ( ::pie, :bars3d, ::lines3d)?
 LWP
 LWP::UserAgent
@@ -31,7 +32,7 @@ MARC::Charset
 MARC::Field
 MARC::Record
 Event
-Net::Z3950  - requires yaz and Event.pm
+Net::Z3950  - requires Yaz Toolkit and Event.pm
 Spreadsheet::WriteExcel
 Template
 Template::Stash
@@ -53,6 +54,12 @@ project. Note that you must install the Bundle::OpenSRF separately.
 Bundles have special meaning for the CPAN module. When you install the 
 bundle module all modules mentioned in CONTENTS will be installed 
 instead.
+
+=head1 PREREQUISITES
+
+Yaz Toolkit (http://indexdata.dk/yaz) - needed for Net::Z3950
+GD Graphics Library (http://www.boutell.com/gd/) needed for GD::Graph
+libxml2 - needed by XML::LibXML
 
 =head1 AUTHOR
 
