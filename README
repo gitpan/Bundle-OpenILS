@@ -6,7 +6,7 @@
 The Bundle::OpenILS collection is a set of Perl modules bundled to
 ease installation overhead for Open-ILS (http://open-ils.org),
 an open-source integrated library system developed by Georgia
-Library Pines (http://pines.lib.ga.us/)
+Library PINES (http://pines.lib.ga.us/)
 
 PREREQUISITES
 
@@ -19,10 +19,8 @@ Not a complete list yet.
 
 INSTALLATION
 
-Near as I can tell, the only way to install a bundle is from CPAN
-like this:
-
-perl -MCPAN -e 'install Bundle::OpenILS'
+$ perl -MCPAN -e 'install Bundle::OpenILS'
+$ cpan Bundle::OpenILS
 
 DOCUMENTATION
 
@@ -30,13 +28,12 @@ See documentation for individual modules included.
 
 SUPPORT
 
-Coming in next version :-)
-
 AVAILABILITY
 
 COPYRIGHT
 
-  © 2005 Joshua Ferraro. All rights reserved.
+  © 2006, LibLime
+  Joshua Ferraro <jmf@liblime.com>
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

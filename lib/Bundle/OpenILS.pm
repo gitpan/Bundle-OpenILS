@@ -1,6 +1,6 @@
 package Bundle::OpenILS;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 1;
 __END__
@@ -13,26 +13,24 @@ Bundle::OpenILS - install all OpenILS prereq modules
 
   perl -MCPAN -e 'install Bundle::OpenILS'
 
+  or ...
+
+  cpan Bundle::OpenILS
+
 =head1 CONTENTS
 
 APR::Const
 Class::DBI
-Class::DBI::AbstractSearch
 CGI
 DateTime
 DateTime::Format::ISO8601
 Digest::MD5
-DBD
-DBD::Pg
-GD - Requires GD Graphics Library
-GD::Graph - ( ::pie, :bars3d, ::lines3d)?
-LWP
+GD::Graph ( ::pie, :bars3d, ::lines3d)?
 LWP::UserAgent
-MARC::Charset
-MARC::Field
 MARC::Record
-Event
-Net::Z3950  - requires Yaz Toolkit and Event.pm
+MARC::Charset
+MARC::File::XML
+Net::Z3950 (requires yaz and Event.pm)
 Spreadsheet::WriteExcel
 Template
 Template::Stash
@@ -41,6 +39,7 @@ Time::HiRes
 XML::LibXSLT
 XML::LibXML
 XML::SAX
+UNIVERSAL::require
 
 =head1 DESCRIPTION
 
@@ -60,6 +59,7 @@ instead.
 Yaz Toolkit (http://indexdata.dk/yaz) - needed for Net::Z3950
 GD Graphics Library (http://www.boutell.com/gd/) needed for GD::Graph
 libxml2 - needed by XML::LibXML
+libxslt - needed by XML::LibXSLT
 
 =head1 AUTHOR
 
@@ -77,7 +77,7 @@ The web site for Open-ILS is: http://open-ils.org
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2005 Georgia Public Library Service
+Copyright (C) 2006 LibLime
 Joshua Ferraro E<lt>jmf@liblime.comE<gt>
 
 This program is free software; you can redistribute it and/or
