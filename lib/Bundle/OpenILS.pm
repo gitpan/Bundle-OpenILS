@@ -1,13 +1,13 @@
 package Bundle::OpenILS;
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 1;
 __END__
 
 =head1 NAME
 
-Bundle::OpenILS - install all OpenILS prereq modules
+Bundle::OpenILS - install all OpenILS prereq modules available on CPAN
 
 =head1 SYNOPSIS
 
@@ -27,9 +27,6 @@ DateTime::Format::ISO8601
 Digest::MD5
 GD::Graph ( ::pie, :bars3d, ::lines3d)?
 LWP::UserAgent
-MARC::Record
-MARC::Charset
-MARC::File::XML
 Net::Z3950 (requires yaz and Event.pm)
 Spreadsheet::WriteExcel
 Template
@@ -43,12 +40,19 @@ UNIVERSAL::require
 
 =head1 DESCRIPTION
 
-This bundle defines all prereq modules for the perl code used in the
-Open-ILS component of the Open-ILS (http://open-ils.org) Integrated 
-Library System (library as in librarian). For now, it only includes 
-non-OpenILS and non-OpenSRF modules (ie, ones publically available 
-on CPAN) but eventually, it will include all the perl for that 
-project. Note that you must install the Bundle::OpenSRF separately.
+This bundle defines all CPAN-available prereq perl modules 
+in the Open-ILS component of the Open-ILS (http://open-ils.org) 
+Integrated Library System (library as in librarian). 
+
+Note that you MUST still follow the instructions on the
+wiki, preferably derived from the Debian, Ubuntu or Gentoo docs, for
+installing Perl dependencies, especially for the MARC::* related
+modules and Javascript::Spidermonkey.  These bundles do not include
+the MARC::* modules, as their maintainers have not released updated
+versions, and it can not automate the installation of JS::SM without
+a good bit of work, because E4X support is required in Evergreen.
+
+Note that you must install the Bundle::OpenSRF separately.
 
 Bundles have special meaning for the CPAN module. When you install the 
 bundle module all modules mentioned in CONTENTS will be installed 
@@ -56,10 +60,18 @@ instead.
 
 =head1 PREREQUISITES
 
+Partial list:
+
 Yaz Toolkit (http://indexdata.dk/yaz) - needed for Net::Z3950
 GD Graphics Library (http://www.boutell.com/gd/) needed for GD::Graph
 libxml2 - needed by XML::LibXML
 libxslt - needed by XML::LibXSLT
+
+Please see the documentation at:
+
+http://open-ils.org/dokuwiki/doku.php?id=server_installation
+
+for a more detailed list of prereqs.
 
 =head1 AUTHOR
 
